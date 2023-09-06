@@ -29,7 +29,23 @@ import tooltipVariant from '../../examples/iconbutton/tooltipVariant.js';
 export default function DocsPage({ generatedDocGen }: {| generatedDocGen: DocGen |}): Node {
   return (
     <Page title={generatedDocGen?.displayName}>
-      <PageHeader name={generatedDocGen?.displayName} description={generatedDocGen?.description}>
+      <PageHeader
+        name={generatedDocGen?.displayName}
+        description={generatedDocGen?.description}
+        slimBanner={
+          <SlimBanner
+            type="error"
+            iconAccessibilityLabel="Info"
+            message={`IconButton role="link" is soon to be deprecated, use IconButtonLink instead.`}
+            helperLink={{
+              text: 'View IconButtonLink',
+              accessibilityLabel: 'View IconButtonLink documentation page',
+              href: '/web/iconbuttonlink',
+              onClick: () => {},
+            }}
+          />
+        }
+      >
         <SandpackExample code={main} name="Main example" hideEditor />
       </PageHeader>
       <PropTable
@@ -82,7 +98,15 @@ export default function DocsPage({ generatedDocGen }: {| generatedDocGen: DocGen
             description:
               'Icon displayed in IconButton to convey the behavior of the component. Refer to the [iconography](/foundations/iconography/library#Search-icon-library) guidelines regarding the available icon options.',
           },
+          {
+            name: 'name',
+            type: 'string',
+            description: [
+              'The name attribute specifies the name of the <button> element.',
 
+              'The name attribute is used to reference form-data after the form has been submitted.',
+            ],
+          },
           {
             name: 'onClick',
             type: '({| event: SyntheticMouseEvent<HTMLButtonElement> | SyntheticKeyboardEvent<HTMLButtonElement> | SyntheticMouseEvent<HTMLAnchorElement> | SyntheticKeyboardEvent<HTMLAnchorElement>, {| dangerouslyDisableOnNavigation: () => void |}> |}) => void',
@@ -499,6 +523,17 @@ Follow these guidelines for \`bgColor\`
             sandpackExample={<SandpackExample code={selectedState} name="Selected state example" />}
           />
         </MainSection.Subsection>
+        <MainSection.Subsection
+          title="External handlers"
+          description={`IconButton consumes external handlers from [GlobalEventsHandlerProvider](/web/utilities/globaleventshandlerprovider).
+
+Handlers:
+
+- [onNavigation](/web/utilities/globaleventshandlerprovider#onNavigation:-custom-navigation): executed when IconButton role="link" is clicked
+
+See [GlobalEventsHandlerProvider](/web/utilities/globaleventshandlerprovider#onNavigation:-custom-navigation) for more information.
+`}
+        />
       </MainSection>
       <MainSection
         name="Writing"

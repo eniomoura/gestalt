@@ -18,7 +18,9 @@ import ColorSchemeProvider, { useColorScheme } from './contexts/ColorSchemeProvi
 import DefaultLabelProvider, { useDefaultLabelContext } from './contexts/DefaultLabelProvider.js';
 import DeviceTypeProvider, { useDeviceType } from './contexts/DeviceTypeProvider.js';
 import ExperimentProvider from './contexts/ExperimentProvider.js';
-import GlobalEventsHandlerProvider from './contexts/GlobalEventsHandlerProvider.js';
+import GlobalEventsHandlerProvider, {
+  useGlobalEventsHandlerContext,
+} from './contexts/GlobalEventsHandlerProvider.js';
 import Datapoint from './Datapoint.js';
 import Divider from './Divider.js';
 import Dropdown from './Dropdown.js';
@@ -29,6 +31,7 @@ import HelpButton from './HelpButton.js';
 import Icon from './Icon.js';
 import IconButton from './IconButton.js';
 import IconButtonFloating from './IconButtonFloating.js';
+import IconButtonLink from './IconButtonLink.js';
 import Image from './Image.js';
 import Label from './Label.js';
 import Layer from './Layer.js';
@@ -62,10 +65,12 @@ import Status from './Status.js';
 import Sticky from './Sticky.js';
 import Switch from './Switch.js';
 import Table from './Table.js';
+import TableOfContents from './TableOfContents.js';
 import Tabs from './Tabs.js';
 import Tag from './Tag.js';
 import TagData from './TagData.js';
 import TapArea from './TapArea.js';
+import TapAreaLink from './TapAreaLink.js';
 import Text from './Text.js';
 import TextArea from './TextArea.js';
 import TextField from './TextField.js';
@@ -111,6 +116,7 @@ export {
   Icon,
   IconButton,
   IconButtonFloating,
+  IconButtonLink,
   Image,
   Label,
   Layer,
@@ -144,10 +150,12 @@ export {
   Sticky,
   Switch,
   Table,
+  TableOfContents,
   Tabs,
   Tag,
   TagData,
   TapArea,
+  TapAreaLink,
   Text,
   TextArea,
   TextField,
@@ -159,6 +167,7 @@ export {
   useDefaultLabelContext as useDefaultLabel,
   useDeviceType,
   useFocusVisible,
+  useGlobalEventsHandlerContext as useGlobalEventsHandler,
   useReducedMotion,
   Video,
   WashAnimated,

@@ -175,9 +175,11 @@ import speech from './speech.svg';
 import speechEllipsis from './speech-ellipsis.svg';
 import star from './star.svg';
 import starHalf from './star-half.svg';
+import starOutline from './star-outline.svg';
 import sun from './sun.svg';
 import switchAccount from './switch-account.svg';
 import tag from './tag.svg';
+import target from './target.svg';
 import terms from './terms.svg';
 import textAlignCenter from './text-align-center.svg';
 import textAlignLeft from './text-align-left.svg';
@@ -390,6 +392,7 @@ const icons = Object.freeze({
   sparkle,
   speech,
   'speech-ellipsis': speechEllipsis,
+  'star-outline': starOutline,
   star,
   'star-half': starHalf,
   sun,
@@ -411,6 +414,7 @@ const icons = Object.freeze({
   'thumbs-down': thumbsDown,
   'thumbs-up': thumbsUp,
   'trash-can': trashCan,
+  target,
   trending,
   twitter,
   'video-advance-10-seconds': videoAdvance10Seconds,
